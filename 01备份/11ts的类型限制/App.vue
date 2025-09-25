@@ -1,15 +1,11 @@
 <template>
   <div class="app">
-    <h2>输入内容{{ msg }}</h2>
-     输入吧：<input type="text" v-model="msg" > </input>
+    <Person />
   </div>
 </template>
 
 <script setup lang="ts" name="App">
 import Person from './components/Person.vue'
-import { ref } from 'vue'
-
-let msg = ref()
 </script>
 
 <style scoped>
