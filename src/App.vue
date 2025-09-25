@@ -1,20 +1,17 @@
 <template>
-  <div class="app">
-    <h2>输入内容{{ msg }}</h2>
-     输入吧：<input type="text" v-model="msg" > </input>
+  <div id="app">
+    <Count />
+    <Langue />
   </div>
 </template>
 
 <script setup lang="ts" name="App">
-import Person from './components/Person.vue'
-import { ref } from 'vue'
-
-let msg = ref()
+import Count from '@/components/Count.vue'
+import Langue from './components/Langue.vue'
 </script>
 
 <style scoped>
-button {
-  background-color: aqua;
-  margin: 10px;
+#app {
+  margin: 20px;
 }
 </style>
