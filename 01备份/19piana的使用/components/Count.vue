@@ -1,6 +1,6 @@
 <template>
   <div class="count-div">
-    <h2>当前数据为：{{ useCount.countNum }}</h2>
+    <h2>当前数据为：{{ countNum }}</h2>
     <select v-model.number="val">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -14,16 +14,17 @@
 <script setup lang="ts" name="Count">
 import { ref } from 'vue'
 import { useCountStore } from '@/store/Count'
+import { storeToRefs } from 'pinia'
 
-let useCount = useCountStore()
+let {countNum} = storeToRefs(useCountStore())
 
 let val = ref(1)
 
 function add() {
-  useCount.countNum += val.value
+  countNum.value += val.value
 }
 function subs() {
-  useCount.countNum -= val.value
+  countNum.value -= val.value
 }
 </script>
 

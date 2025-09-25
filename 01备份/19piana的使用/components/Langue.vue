@@ -3,7 +3,7 @@
     <div>Langue</div>
     <button @click="getLangue">点我获取土味情话</button>
     <ul>
-      <li v-for="langue in langueList">{{ langue }}</li>
+      <li v-for="(langue,index) in langueList" :key="index">{{ langue }}</li>
     </ul>
   </div>
 </template>
